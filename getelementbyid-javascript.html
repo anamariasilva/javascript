@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo getElementById e innerHTML</title>
+</head>
+<body>
+    <h1>Exemplo getElementById e innerHTML</h1>
+    <br>
+  <script language="javascript" type="text/javascript">
+  var parametroElemento = 0;
+  
+  function exibeElemento(elementoHTML){
+  parametroElemento = elementoHTML;	
+  
+  if (parametroElemento == "imagem"){
+		document.getElementById("descricao_default").innerHTML = "<img src='imagem.jpg' alt='Descrição da imagem a ser exibida na div com id = descricao_default.' /></a>";
+	}
+  if (parametroElemento == "texto"){
+		document.getElementById("descricao_default").innerHTML = "Texto a ser exibido na div com id = 'descricao_default'.";
+	}  
+
+  }
+  </script>
+  <button onclick="javascript:exibeElemento('imagem')">Botão de imagem</button>
+  <button onclick="javascript:exibeElemento('texto')">Botão de texto</button>
+  
+  <br><br>
+
+  <div id="descricao_default"></div>
+</body>
+</html>
